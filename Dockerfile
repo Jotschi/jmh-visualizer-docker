@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+    apk add --no-cache git
 RUN git clone https://github.com/jzillmann/jmh-visualizer.git
 
 WORKDIR jmh-visualizer
